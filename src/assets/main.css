@@ -1,42 +1,95 @@
+@import 'tailwindcss';
 @import './base.css';
-@import "tailwindcss";
 
 @theme {
+  /* Colors */
+  --color-primary: var(--color-primary-main);
+  --color-mossy-main: #636b2f;
+  --color-mossy-pale: #bac095;
+  --color-mossy-light: #d4de95;
+  --color-mossy-dark: #3d4127;
+
+  /* Mossy Main Scale (Excluded Main, Pale, Light, Dark) */
+  --color-mossy-30: #f6f7f2;
+  --color-mossy-50: #ecedde;
+  --color-mossy-100: #daddbe;
+  --color-mossy-200: #c1c892;
+  --color-mossy-300: #a7b168;
+  --color-mossy-400: #8c9744;
+  --color-mossy-500: #757f38; /* Slightly deeper than main */
+  --color-mossy-600: #545b28;
+  --color-mossy-700: #464c21;
+  --color-mossy-800: #2d3115;
+  --color-mossy-900: #1a1c0c;
+
+  /* --- PRIMARY (Deep Charcoal Green) --- */
+  --color-primary-30: #f4f5f4;
+  --color-primary-50: #e8eae9;
+  --color-primary-100: #d1d5d3;
+  --color-primary-200: #a3aba7;
+  --color-primary-300: #75817b;
+  --color-primary-400: #47574f;
+  --color-primary-500: #1a2d23; /* Closer to main, but distinct */
+  --color-primary-600: #15241c;
+  --color-primary-700: #101b15;
+  --color-primary-800: #0b120e;
+  --color-primary-900: #050907;
+  --color-primary-main: #0f1712; /* MAIN */
+
+  /* --- SECONDARY (Slate Gray) --- */
+  --color-secondary-30: #f8fafc;
+  --color-secondary-50: #f1f5f9;
+  --color-secondary-100: #e2e8f0;
+  --color-secondary-200: #cbd5e1;
+  --color-secondary-300: #94a3b8;
+  --color-secondary-400: #475569;
+  --color-secondary-500: #334155;
+  --color-secondary-600: #1e293b;
+  --color-secondary-700: #0f172a;
+  --color-secondary-800: #020617;
+  --color-secondary-900: #010409;
+  --color-secondary-main: #64748b; /* MAIN */
+
+  /* --- DANGER (Terracotta Red) --- */
+  --color-danger-30: #fef2f2;
+  --color-danger-50: #fff1f1;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #991b1b;
+  --color-danger-800: #7f1d1d;
+  --color-danger-900: #450a0a;
+  --color-danger-main: #b91c1c; /* MAIN */
+
+  /* --- WARNING (Amber Ochre) --- */
+  --color-warning-30: #fffbeb;
+  --color-warning-50: #fff9db;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #b45309;
+  --color-warning-700: #92400e;
+  --color-warning-800: #78350f;
+  --color-warning-900: #451a03;
+  --color-warning-main: #d97706; /* MAIN */
+
+  /* Typography */
   --font-sans: 'Google Sans Flex', ui-sans-serif, system-ui, sans-serif;
-}
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+  /* Font Size Presets (Following the 4px / 0.25rem scale) */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem; /* 36px */
 }
 
 /* Global Styles */
