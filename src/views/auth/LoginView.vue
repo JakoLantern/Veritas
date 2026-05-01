@@ -25,7 +25,9 @@ const formErrors = reactive({
 const isSubmitting = ref(false)
 
 const isEmailValid = computed(() => /^\S+@\S+\.\S+$/.test(form.email.trim()))
-const canSubmit = computed(() => isEmailValid.value && form.password.trim() !== '' && !isSubmitting.value)
+const canSubmit = computed(
+  () => isEmailValid.value && form.password.trim() !== '' && !isSubmitting.value,
+)
 
 function validateForm() {
   formErrors.email = isEmailValid.value ? '' : 'Enter a valid email address.'
